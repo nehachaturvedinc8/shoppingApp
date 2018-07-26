@@ -12,6 +12,13 @@
 		<springmvc.version>5.0.7.RELEASE</springmvc.version>
 	</properties>
 	<dependencies>
+	<!-- shopping back end project dependency -->
+	<dependency>
+	
+	<groupId>net.ncpk</groupId>
+	<artifactId>shoppingbackend</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	</dependency>
 		<!-- javaee-api -->
 		<dependency>
 			<groupId>javax</groupId>
