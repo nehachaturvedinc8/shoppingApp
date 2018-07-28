@@ -1,4 +1,4 @@
-package net.ncpk.shoopingbackend;
+package net.ncpk.shoppingbackend;
 
 /**
  * Hello world!
