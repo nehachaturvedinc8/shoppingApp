@@ -13,7 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<springmvc.version>5.0.7.RELEASE</springmvc.version>
-		<mssql.version>6.1.0.jre8</mssql.version>
+		<mssql.version>6.4.0.jre8</mssql.version>
 		<hibernate.version>5.2.17.Final</hibernate.version>
 	</properties>
 
@@ -42,7 +42,11 @@
             <version>${mssql.version}</version>
         </dependency>
         
-        
+       <!--  <dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>6.4.0.jre8</version>
+</dependency> -->
         <!-- Hibernate dependency -->
 		
 <dependency>

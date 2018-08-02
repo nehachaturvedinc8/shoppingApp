@@ -4,20 +4,20 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import net.ncpk.shoppingbackend.dao.CategoryDAO;
-import net.ncpk.shoppingbackend.dto.Category;
 
-public class CategoryTest {
+import net.ncpk.shoppingbackend.dao.ProductDAO;
+import net.ncpk.shoppingbackend.dto.Product;
+
+public class ProductTestCase {
 	
 	
-	private static AnnotationConfigApplicationContext context;
+private static AnnotationConfigApplicationContext context;
 	
 	
-	private static CategoryDAO categoryDAO;
-	private Category category;
+	private static ProductDAO productDAO;
+	private Product product;
 
 	
 	@BeforeClass
@@ -26,7 +26,7 @@ public class CategoryTest {
 		context.scan("net.ncpk.shoppingbackend");
 		context.refresh();
 		
-		categoryDAO=(CategoryDAO) context.getBean("categoryDAO");
+		productDAO=(ProductDAO) context.getBean("productDAO");
 	}
 	
 	
@@ -70,5 +70,5 @@ public class CategoryTest {
 		assertEquals("Successfully fetched the list of active categories",2,categoryDAO.list().size());
 		
 	}
-	
+
 }

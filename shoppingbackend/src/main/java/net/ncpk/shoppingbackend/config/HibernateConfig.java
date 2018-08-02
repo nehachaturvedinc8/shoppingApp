@@ -22,8 +22,14 @@ public class HibernateConfig {
 	
 	
 	//DBMS details
-	private final static String DATABASE_URL="jdbc:microsoft:sqlserver://CDC5-L-6021595";
-	private final static String DATABASE_DRIVER="com.microsoft.jdbc.sqlserver.SQLServerDriver";
+/*	private final static String DATABASE_URL="jdbc:sqlserver://CDC5-L-6021595;" +  
+	   "databaseName=onlineshopping";*/
+	private final static String DATABASE_URL="jdbc:sqlserver://CDC5-L-6021595:1433;" +  "instanceName=MYSQLSERVER"+
+			   "databaseName=onlineshopping";
+	
+	/*private final static String DATABASE_URL="jdbc:sqlserver://localhost;" +  
+			   "databaseName=onlineshopping";*/
+	private final static String DATABASE_DRIVER="com.microsoft.sqlserver.jdbc.SQLServerDriver";
 	private final static String DATABASE_DIALECT="org.hibernate.dialect.SQLServerDialect";
 	private final static String DATABASE_USERNAME="sa";
 	private final static String DATABASE_PASSWORD="12345678";
@@ -57,6 +63,7 @@ public class HibernateConfig {
 		properties.put("hibernate.dialect", DATABASE_DIALECT);
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.formate_sql", "true");
+		properties.put("hibernate.hbm2ddl.auto", "update");
 		return properties;
 	}
 	
